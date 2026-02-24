@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hybrid RAG Research Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Hybrid RAG Research Assistant</h1>
+
+    <div class="top-section">
+
+        <div class="left-panel">
+
+            <label>Select Research Paper</label>
+            <select id="paperSelect"></select>
+
+            <textarea id="question"
+                placeholder="Ask a question related to the selected paper..."></textarea>
+
+            <button onclick="askQuestion()">Generate Answer</button>
+
+            <div id="confidenceContainer" class="confidence-container" style="display:none;">
+                <div class="confidence-bar-bg">
+                    <div id="confidenceBar" class="confidence-bar"></div>
+                </div>
+                <p id="confidenceText"></p>
+            </div>
+
+        </div>
+
+        <div class="right-panel">
+            <h3>PDF Preview</h3>
+            <iframe id="pdfViewer"></iframe>
+        </div>
+
+    </div>
+
+    <div id="result" class="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
